@@ -117,6 +117,20 @@ namespace Calculator
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
+        [Test]
+        public void GetMultiplication_Input15tand10Returns150()
 
-    }    
+        {
+            //Arrange
+            double number1 = 15;
+            double number2 = 10;
+            double expectedResult = number1 * number2;
+            Calc testCalc = new Calc(number1, number2);
+            //Act
+            double actualResult = testCalc.GetMultiplication();
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+
+    }
 }
