@@ -173,5 +173,19 @@ namespace Calculator
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
+        [Test]
+        public void GetDivision_Input50tand5Returns5()
+
+        {
+            //Arrange
+            double number1 = 50;
+            double number2 = 10;
+            double expectedResult = number1 / number2;
+            Calc testCalc = new Calc(number1, number2);
+            //Act
+            double actualResult = testCalc.GetDivision();
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
     }
 }
