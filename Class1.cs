@@ -16,9 +16,9 @@ namespace Calculator
         {
             [Test]
             public void GetAddition_Input30and40_Returns70()
-           
-   
-            
+
+
+
             {
                 //Arrange
                 double number1 = 30;
@@ -74,5 +74,21 @@ namespace Calculator
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
+    
+    [Test]
+    public void GetSubtraction_Input8tand4Returns4()
+
+    {
+        //Arrange
+        double number1 = 8;
+        double number2 = 4;
+        double expectedResult = number1 - number2;
+        Calc testCalc = new Calc(number1, number2);
+        //Act
+        double actualResult = testCalc.GetSubtraction();
+        //Assert
+        Assert.AreEqual(expectedResult, actualResult);
     }
+
+}    
 }
