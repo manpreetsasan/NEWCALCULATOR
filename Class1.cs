@@ -33,7 +33,7 @@ namespace Calculator
 
         }
         [Test]
-        public void GetAddition_Input3pointand4Repoint5turns8()
+        public void GetAddition_Input3point5and4point5Returns8()
 
         {
             //Arrange
@@ -46,6 +46,19 @@ namespace Calculator
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
+        [Test]
+        public void GetAddition_Input7and4Returns11()
 
+        {
+            //Arrange
+            double number1 = 7;
+            double number2 = 4;
+            double expectedResult = number1 + number2;
+            Calc testCalc = new Calc(number1, number2);
+            //Act
+            double actualResult = testCalc.GetAddition();
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
     }
 }
