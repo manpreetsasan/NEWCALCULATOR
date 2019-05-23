@@ -145,6 +145,20 @@ namespace Calculator
             //Assert
             Assert.AreEqual(expectedResult, actualResult);
         }
+        [Test]
+        public void GetDivision_Input10tand5Returns2()
+
+        {
+            //Arrange
+            double number1 = 10;
+            double number2 = 5;
+            double expectedResult = number1 / number2;
+            Calc testCalc = new Calc(number1, number2);
+            //Act
+            double actualResult = testCalc.GetDivision();
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
 
     }
 }
