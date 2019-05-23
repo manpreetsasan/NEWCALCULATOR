@@ -89,6 +89,19 @@ namespace Calculator
         //Assert
         Assert.AreEqual(expectedResult, actualResult);
     }
+        [Test]
+        public void GetSubtraction_Input200tand40Returns160()
 
-}    
+        {
+            //Arrange
+            double number1 = 200;
+            double number2 = 40;
+            double expectedResult = number1 - number2;
+            Calc testCalc = new Calc(number1, number2);
+            //Act
+            double actualResult = testCalc.GetSubtraction();
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
+        }
+    }    
 }
