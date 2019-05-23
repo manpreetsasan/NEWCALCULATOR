@@ -8,18 +8,21 @@ using AwesomeCalculator;
 
 namespace Calculator
 {
-    public class Class1
+    public class sClass1
     {
 
         [TestFixture]
         class CalcTests
         {
             [Test]
-            public void GetAddition_Input20and50_Returns70()
+            public void GetAddition_Input30and40_Returns70()
+           
+   
+            
             {
                 //Arrange
-                double number1 = 20;
-                double number2 = 50;
+                double number1 = 30;
+                double number2 = 40;
                 double expectedResult = number1 + number2;
                 Calc testCalc = new Calc(number1, number2);
                 //Act
@@ -27,6 +30,21 @@ namespace Calculator
                 //Assert
                 Assert.AreEqual(expectedResult, actualResult);
             }
+
+        }
+        [Test]
+        public void GetAddition_Input3pointand4Repoint5turns8()
+
+        {
+            //Arrange
+            double number1 = 3.5;
+            double number2 = 4.5;
+            double expectedResult = number1 + number2;
+            Calc testCalc = new Calc(number1, number2);
+            //Act
+            double actualResult = testCalc.GetAddition();
+            //Assert
+            Assert.AreEqual(expectedResult, actualResult);
         }
 
     }
